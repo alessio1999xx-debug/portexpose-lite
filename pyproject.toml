@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portexpose-lite"
+version = "0.1.0"
+description = "Find Docker Compose ports that publish past UFW: 0.0.0.0 bindings and exposed databases. Read-only."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.8"
+authors = [{name = "Alessio Auretto"}]
+keywords = [
+  "docker",
+  "docker-compose",
+  "ufw",
+  "firewall",
+  "ports",
+  "security",
+  "selfhosted",
+  "homelab",
+  "cli",
+  "stdlib",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "Operating System :: POSIX",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security",
+  "Topic :: System :: Networking :: Firewalls",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://py-forge.com/products/portexpose-docker-firewall-auditor?utm_source=pypi&utm_medium=pypi&utm_campaign=portexpose-lite"
+Repository = "https://github.com/alessio1999xx-debug/portexpose-lite"
+
+[project.scripts]
+portexpose-lite = "portexpose_lite:main"
+
+[tool.setuptools]
+py-modules = ["portexpose_lite"]
