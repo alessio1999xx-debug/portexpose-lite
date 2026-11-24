@@ -17,4 +17,10 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python test_portexpose_lite.py
-      - run: python portexpose_lite.py --demo; test $? -eq 1
+      - name: Demo exits 1 on public findings
+        run: |
+          set +e
+          python portexpose_lite.py --demo
+          rc=$?
+          set -e
+          test "$rc" -eq 1
